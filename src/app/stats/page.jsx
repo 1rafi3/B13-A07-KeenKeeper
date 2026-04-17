@@ -2,7 +2,7 @@
 import { useMemo } from "react";
 import { useTimeline } from "../context/TimelineContext";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
-import { Phone, MessageCircle, Video, Activity } from "lucide-react";
+import { Phone, MessageCircle, Video, Activity } from "lucide-renpm npact";
 
 const COLORS = {
   call: "#4ade80",
@@ -93,7 +93,6 @@ const StatsPage = () => {
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">Friendship Analytics</h1>
-        
       </div>
       
 

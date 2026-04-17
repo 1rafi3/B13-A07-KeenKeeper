@@ -1,6 +1,6 @@
 import Friends from "./friends/page";
 import friends from "../../public/friends.json";
-import { Circles } from "react-spinners";
+import { ClipLoader } from "react-spinners";
 
 const HomePage = () => {
 
@@ -72,7 +72,7 @@ const HomePage = () => {
                 {
                     loading ? (
                         <div className="flex justify-center items-center py-20">
-                            <Circles height={60} width={60} color="#1e4d3a" />
+                            <ClipLoader size={60} color="#1e4d3a" />
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">

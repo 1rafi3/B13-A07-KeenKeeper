@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import { useParams } from 'next/navigation';
 import friends from "../../../../public/friends.json";
 import CheckInButtons from "./CheckInButtons";
 import { Bell, Archive, Trash2, Pencil } from "lucide-react";
@@ -11,8 +14,9 @@ const statusStyle = (status) => {
     return { background: "#dcfce7", color: "#166534" };
 };
 
-const FriendDetailsPage = async ({ params }) => {
-    const { id } = await params;
+const FriendDetailsPage = () => {
+    const params = useParams();
+    const id = params.id;
     const friend = friends.find((f) => f.id.toString() === id);
 
     if (!friend) return (
