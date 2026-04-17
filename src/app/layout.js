@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/Navbar";
 
+import TimelineProvider from "./context/TimelineContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,14 +26,12 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        
-        <h2 className="text-3xl font-bold text-center mt-8 mb-4">
-          Welcome to KeenKeeper
-        </h2>
-        <p className="text-center text-gray-600 mb-8">
-          Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
-        </p>
-        
+        <TimelineProvider>
+          <Navbar />
+          {children}
+          
+        </TimelineProvider>
+
       </body>
     </html>
   );
